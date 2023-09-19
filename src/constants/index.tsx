@@ -57,8 +57,12 @@ export const statistics: Statistics[] = [
   { value: "500+", label: "Shops" },
   { value: "250k+", label: "Customers" },
 ];
-
-export const products = [
+export interface Products {
+  imgURL: string;
+  name: string;
+  price: string;
+}
+export const products: Products[] = [
   {
     imgURL: shoe4,
     name: "Nike Air Jordan-01",

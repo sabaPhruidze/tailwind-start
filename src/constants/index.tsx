@@ -5,9 +5,9 @@ import support from "../assets/icons/support.svg";
 import truckFast from "../assets/icons/truck-fast.svg";
 import twitter from "../assets/icons/twitter.svg";
 
-import bigShoe1 from "../assets/images/big-shoe1.png";
-import bigShoe2 from "../assets/images/big-shoe2.png";
-import bigShoe3 from "../assets/images/big-shoe3.png";
+import bigShoe1 from "../assets/images/bigShoe1.png";
+import bigShoe2 from "../assets/images/bigShoe2.png";
+import bigShoe3 from "../assets/images/bigShoe3.png";
 import customer1 from "../assets/images/customer1.jpeg";
 import customer2 from "../assets/images/customer2.svg";
 import shoe4 from "../assets/images/shoe4.svg";
@@ -28,8 +28,11 @@ export const navLinks: Navlinks[] = [
   { href: "#products", label: "Products" },
   { href: "#contact-us", label: "Contact Us" },
 ];
-
-export const shoes = [
+export interface Shoes {
+  thumbnail: string;
+  bigShoe: string;
+}
+export const shoes: Shoes[] = [
   {
     thumbnail: thumbnailShoe1,
     bigShoe: bigShoe1,
@@ -44,7 +47,12 @@ export const shoes = [
   },
 ];
 
-export const statistics = [
+export interface Statistics {
+  value: string;
+  label: string;
+}
+
+export const statistics: Statistics[] = [
   { value: "1k+", label: "Brands" },
   { value: "500+", label: "Shops" },
   { value: "250k+", label: "Customers" },

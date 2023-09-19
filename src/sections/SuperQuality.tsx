@@ -1,5 +1,5 @@
 import Button from "../components/Button";
-import shoe8 from "../assets/images/shoe8.svg";
+import shoe8 from "../assets/images/shoe8.png";
 const SuperQuality = () => {
   return (
     <section

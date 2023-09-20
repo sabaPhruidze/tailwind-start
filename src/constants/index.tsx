@@ -85,7 +85,12 @@ export const products: Products[] = [
   },
 ];
 
-export const services = [
+export interface Service {
+  imgURL: string;
+  label: string;
+  subtext: string;
+}
+export const services: Service[] = [
   {
     imgURL: truckFast,
     label: "Free shipping",

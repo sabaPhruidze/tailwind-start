@@ -1,4 +1,3 @@
-import React from "react";
 import { Service } from "../constants";
 const ServiceCard = (props: Service) => {
   const { imgURL, label, subtext } = props;

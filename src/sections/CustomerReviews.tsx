@@ -1,8 +1,15 @@
 import { reviews, Reviews } from "../constants";
 import ReviewCard from "../components/ReviewCard";
+import { motion } from "framer-motion";
 const CustomerReviews = () => {
   return (
-    <section className="max-container">
+    <motion.section
+      className="max-container"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 3 }}
+      viewport={{ once: true }}
+    >
       <h3 className="font-palaquin text-center text-4xl font-bold">
         What Our
         <span className="text-coral-red"> Customers </span>
@@ -23,7 +30,7 @@ const CustomerReviews = () => {
           />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 };
 

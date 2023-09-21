@@ -13,6 +13,7 @@ const Subscribe = () => {
         transition={{ duration: 3 }}
         viewport={{ once: true }}
       >
+        {/*  */}
         Sign Up from
         <span className="text-coral-red"> Updates </span>& Newsletter
       </motion.h3>

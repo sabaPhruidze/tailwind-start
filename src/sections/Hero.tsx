@@ -141,7 +141,13 @@ const Hero = () => {
           ))}
         </motion.div>
       </div>
-      <div className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
+      <motion.div
+        className="relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center"
+        initial={{ opacity: 0, x: "200px" }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, delay: 2 }}
+        viewport={{ once: true }}
+      >
         <img
           src={bigShoeImg}
           alt="big shoes 1"
@@ -162,7 +168,7 @@ const Hero = () => {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

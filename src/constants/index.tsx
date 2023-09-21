@@ -131,8 +131,14 @@ export const reviews: Reviews[] = [
       "The product not only met but exceeded my expectations. I'll definitely be a returning customer!",
   },
 ];
-
-export const footerLinks = [
+export type FooterLinks = {
+  title: string;
+  links: {
+    name: string;
+    link: string;
+  }[];
+};
+export const footerLinks: FooterLinks[] = [
   {
     title: "Products",
     links: [
@@ -162,8 +168,11 @@ export const footerLinks = [
     ],
   },
 ];
-
-export const socialMedia = [
+export interface SocialMedia {
+  src: string;
+  alt: string;
+}
+export const socialMedia: SocialMedia[] = [
   { src: facebook, alt: "facebook logo" },
   { src: twitter, alt: "twitter logo" },
   { src: instagram, alt: "instagram logo" },

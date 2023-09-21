@@ -12,7 +12,7 @@ const Nav = () => {
       transition: {
         staggerChildren: 0.4,
         ease: "easeInOut",
-        delayChildren: 0,
+        delayChildren: 0.5,
       },
     },
   };
@@ -33,7 +33,15 @@ const Nav = () => {
     <header className="padding-x py-8 absolute z-10 w-full">
       <nav className="flex justify-between items-center max-container">
         <a href="/">
-          <img src={HeaderLogo} alt="header logo" width={130} height={29} />
+          <motion.img
+            src={HeaderLogo}
+            alt="header logo"
+            width={130}
+            height={29}
+            initial={{ opacity: 0, x: "-20px" }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0 }}
+          />
         </a>
         <motion.ul
           className="flex-1 flex justify-center items-center gap-16 max-lg:hidden"
@@ -53,12 +61,13 @@ const Nav = () => {
           ))}
         </motion.ul>
         <div>
-          <img
+          <motion.img
             src={hamburger}
-            alt="hamburger"
-            width={25}
-            height={25}
-            className="hidden max-lg:block"
+            alt="nav icon"
+            className="w-[25px] h-[25px] hidden max-lg:block"
+            initial={{ opacity: 0, x: "20px" }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0 }}
           />
         </div>
       </nav>

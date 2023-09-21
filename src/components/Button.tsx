@@ -4,16 +4,18 @@ interface Props {
   backgroundColor?: string;
   border?: string;
   textColor?: string;
+  fullWidth?: string;
 }
 const Button = (props: Props) => {
-  const { label, iconURL, backgroundColor, border, textColor } = props;
+  const { label, iconURL, backgroundColor, border, textColor, fullWidth } =
+    props;
   return (
     <button
       className={`flex rounded-full justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none ${
         backgroundColor
           ? backgroundColor + " " + textColor + " " + border
           : "bg-coral-red  text-white border-coral-red"
-      }`}
+      } ${fullWidth && "w-full"}`}
     >
       {label}
       {iconURL && (

@@ -109,7 +109,13 @@ export const services: Service[] = [
   },
 ];
 
-export const reviews = [
+export interface Reviews {
+  imgURL: string;
+  customerName: string;
+  rating: number;
+  feedback: string;
+}
+export const reviews: Reviews[] = [
   {
     imgURL: customer1,
     customerName: "Morich Brown",

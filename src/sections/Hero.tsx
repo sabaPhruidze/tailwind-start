@@ -3,8 +3,6 @@ import Button from "../components/Button";
 import ArrowRight from "../assets/icons/arrow-right.svg";
 import { statistics, Statistics, shoes, Shoes } from "../constants";
 import bigShoe1 from "../assets/images/bigShoe1.png";
-import BigShoe2 from "../assets/images/bigShoe2.png";
-import BigShoe3 from "../assets/images/bigShoe3.png";
 import ShoeCard from "../components/ShoeCard";
 const Hero = () => {
   const [bigShoeImg, setBigShoeImg] = useState<string>(bigShoe1);

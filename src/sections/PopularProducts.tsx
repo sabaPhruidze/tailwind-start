@@ -29,7 +29,7 @@ const PopularProducts = () => {
       </div>
       <motion.div
         className="mt-16 grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-4 gap-14"
-        initial={{ opacity: 0, y: "-500px" }}
+        initial={{ opacity: 0, y: "-100px" }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 2, delay: 2 }}
         viewport={{ once: true }}
